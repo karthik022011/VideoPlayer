@@ -6,11 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
    <androidx.media3.ui.PlayerView
-       android:id="@+id/player_view"
+       android:id="@+id/video_player"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        app:show_buffering="when_playing"
+       app:resize_mode="fill"
        app:show_shuffle_button="true"/>
+
+   <ImageButton
+       android:id="@+id/lockButton"
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       android:backgroundTint="@android:color/transparent"
+       android:contentDescription="@string/lock"
+       android:src="@drawable/lock_open_icon"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:tint="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
